@@ -1,4 +1,5 @@
 import tkinter as tk
+from services.filetxt import FileTxt
 
 class MenuArquivo(tk.Menu):
     def __init__(self, master=None, **kwargs):
