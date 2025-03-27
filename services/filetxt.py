@@ -4,4 +4,6 @@ class FileTxt:
         pass
     def abrir_arquivo_texto(self):
         endereco_arquivo_texto = janela_abrir_arquivo()
+    def salvar_arquivo_texto(self):
+
 
