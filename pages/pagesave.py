@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import filedialog
 
 
-def exemplo_salvar_arquivo():
+def janela_salvar_arquivo():
     endereco_arquivo_texto = filedialog.asksaveasfilename(
         # Título da janela de diálogo
         title='Salvar Arquivo',
@@ -27,9 +27,3 @@ def exemplo_salvar_arquivo():
     return endereco_arquivo_texto
 
 
-# Criar janela raiz (necessária para diálogos Tkinter)
-root = tk.Tk()
-root.withdraw()  # Oculta a janela principal
-
-# Chama a função de exemplo
-exemplo_salvar_arquivo()

@@ -6,6 +6,6 @@ class MenuArquivo(tk.Menu):
         super().__init__(master,**kwargs)
         self.add_cascade(label='Novo')
         self.add_command(label='Nova Janela')
-        self.add_command(label='Abrir...')
-        self.add_command(label='Salvar')
+        self.add_command(label='Abrir...', command=FileTxt.abrir_arquivo_texto)
+        self.add_command(label='Salvar', command= FileTxt.salvar_arquivo_texto)
         self.add_command(label='Salvar Como...')
