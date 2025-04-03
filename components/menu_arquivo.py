@@ -1,5 +1,5 @@
 import tkinter as tk
-from services.uteis import salvar_texto_caixa
+from services.filetxt import FileTxt
 
 class MenuArquivo(tk.Menu):
     def __init__(self, master=None, **kwargs):
@@ -8,4 +8,4 @@ class MenuArquivo(tk.Menu):
         self.add_command(label='Nova Janela')
         self.add_command(label='Abrir...')
         self.add_command(label='Salvar')
-        self.add_command(label='Salvar Como...', command= salvar_texto_caixa)
+        self.add_command(label='Salvar Como...', command=FileTxt.salvar_arquivo_texto)

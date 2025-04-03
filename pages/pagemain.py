@@ -2,6 +2,7 @@ import tkinter as tk
 from components.menu_principal import MenuPrincipal
 from components.caixa_texto import CaixaTexto
 from services.uteis import titulo_pagina
+from services.uteis import caixa
 class JanelaPrincipal(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -14,3 +15,4 @@ class JanelaPrincipal(tk.Tk):
         self.config(menu=self.menu)
         self.caixa_texto = CaixaTexto(self)
         self.caixa_texto.pack(side=tk.BOTTOM,expand=True,fill='both')
+        

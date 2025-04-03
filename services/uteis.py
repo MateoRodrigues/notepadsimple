@@ -1,5 +1,5 @@
-def salvar_texto_caixa():
-    return True
+def caixa(caixa_texto):
+    pass
 
 
 def titulo_pagina(titulo_da_pagina="Sem título - Bloco de Notas"):
