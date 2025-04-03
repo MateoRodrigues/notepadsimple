@@ -10,9 +10,10 @@ class JanelaPrincipal(tk.Tk):
         self.iconbitmap("C:/Users/mateo/Documents/python/notepadsimple/assets/Double-J-Design-Origami-Notepad.ico")
         self.titulo_da_pagina = titulo_pagina()
         self.title(self.titulo_da_pagina)
+        self.caixa_texto = CaixaTexto(self)
         self.menu = Menu(self, self.caixa_texto)
         self.config(menu=self.menu)
-        self.caixa_texto = CaixaTexto(self)
+
         self.caixa_texto.pack(side=tk.BOTTOM,expand=True,fill='both')
 
         
