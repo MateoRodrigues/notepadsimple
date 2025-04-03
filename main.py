@@ -1,3 +1,4 @@
 from pages.pagemain import JanelaPrincipal
-janela = JanelaPrincipal()
-janela.mainloop()
+if __name__ == "__main__":
+    janela = JanelaPrincipal()
+    janela.mainloop()

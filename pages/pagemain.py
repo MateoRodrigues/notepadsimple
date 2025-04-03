@@ -1,8 +1,7 @@
 import tkinter as tk
-from components.menu_principal import MenuPrincipal
+from components.menu_principal import Menu
 from components.caixa_texto import CaixaTexto
 from services.uteis import titulo_pagina
-from services.uteis import caixa
 class JanelaPrincipal(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -11,8 +10,9 @@ class JanelaPrincipal(tk.Tk):
         self.iconbitmap("C:/Users/mateo/Documents/python/notepadsimple/assets/Double-J-Design-Origami-Notepad.ico")
         self.titulo_da_pagina = titulo_pagina()
         self.title(self.titulo_da_pagina)
-        self.menu = MenuPrincipal(self)
+        self.menu = Menu(self, self.caixa_texto)
         self.config(menu=self.menu)
         self.caixa_texto = CaixaTexto(self)
         self.caixa_texto.pack(side=tk.BOTTOM,expand=True,fill='both')
+
         

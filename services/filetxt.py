@@ -4,6 +4,8 @@ class FileTxt:
     @staticmethod
     def abrir_arquivo_texto():
         abrir_endereco_arquivo_texto = janela_abrir_arquivo()
+        with open(abrir_endereco_arquivo_texto, 'r+') as arquivo_texto:
+             return arquivo_texto.read()
     @staticmethod
     def salvar_arquivo_texto(caixa_texto):
         salvar_endereco_arquivo_texto = janela_salvar_arquivo()
