@@ -9,7 +9,10 @@ class MenuArquivo(tk.Menu):
         self.add_command(label='Nova Janela')
         self.add_command(label='Abrir...', command=self.abrir_arquivo)
         self.add_command(label='Salvar')
-        self.add_command(label='Salvar Como...')
+        self.add_command(label='Salvar Como...', command=self.salvar_arquivo)
     def abrir_arquivo(self):
         conteudo = FileTxt.abrir_arquivo_texto()
         self.caixa_texto.set_caixa_texto(conteudo)
+    def salvar_arquivo(self):
+        conteudo = self.caixa_texto.get_caixa_texto()
+        FileTxt.salvar_arquivo_texto(conteudo)

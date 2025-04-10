@@ -20,7 +20,7 @@ class FileTxt:
                         arquivo.write(conteudo)
             except Exception as e:
                 print(f"Erro ao salvar arquivo: {e}")
-                return False
+
 
 
 
