@@ -7,7 +7,7 @@ class Menu(tk.Menu):
         super().__init__(master, tearoff=0, font=("Arial", 14))
         self.master = master
         self.caixa_texto = caixa_texto  
-        menu_arquivo1 = MenuArquivo(self, caixa_texto=caixa_texto)
+        menu_arquivo1 = MenuArquivo(self, caixa_texto=caixa_texto,master=self.master)
         menu_editar1 = MenuEditar(self)
         self.add_cascade(label="Arquivo",menu=menu_arquivo1)
         self.add_cascade(label="Editar",menu=menu_editar1)
