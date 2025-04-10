@@ -4,7 +4,7 @@ from .menu_editar import MenuEditar
 
 class Menu(tk.Menu):
     def __init__(self,master=None, caixa_texto=None):
-        super().__init__(master, tearoff=0, font=("Arial", 10))
+        super().__init__(master, tearoff=0, font=("Arial", 14))
         self.master = master
         self.caixa_texto = caixa_texto  
         menu_arquivo1 = MenuArquivo(self, caixa_texto=caixa_texto)
