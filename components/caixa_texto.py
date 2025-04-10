@@ -6,3 +6,6 @@ class CaixaTexto(tk.Text):
     def set_caixa_texto(self,conteudo):
         self.delete(1.0,tk.END)
         self.insert(1.0,conteudo)
+    def get_caixa_texto(self):
+        conteudo = self.get(1.0,tk.END)
+        return conteudo.strip()
