@@ -6,10 +6,10 @@ class MenuArquivo(tk.Menu):
         super().__init__(master, tearoff=0)
         self.pagina = pagina
         self.caixa_texto = caixa_texto
-        self.add_cascade(label='Novo')
+        self.add_cascade(label='Novo', accelerator="Ctrl+N")
         self.add_command(label='Nova Janela')
-        self.add_command(label='Abrir...', command=self.abrir_arquivo)
-        self.add_command(label='Salvar')
+        self.add_command(label='Abrir...', accelerator="Ctrl+O", command=self.abrir_arquivo)
+        self.add_command(label='Salvar', accelerator="Ctrl+S")
         self.add_command(label='Salvar Como...', command=self.salvar_arquivo)
     def abrir_arquivo(self):
         nome_arquivo,conteudo = FileTxt.abrir_arquivo_texto()
