@@ -17,4 +17,4 @@ class MenuArquivo(tk.Menu):
         self.caixa_texto.set_caixa_texto(conteudo)
     def salvar_arquivo(self):
         conteudo = self.caixa_texto.get_caixa_texto()
-        FileTxt.salvar_arquivo_texto(conteudo)
+        FileTxt.salvar_arquivo_texto(conteudo, self.pagina)
