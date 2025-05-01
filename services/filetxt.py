@@ -9,7 +9,7 @@ class FileTxt:
              conteudo = arquivo_texto.read()
              return os.path.basename(arquivo_texto.name), conteudo
     @staticmethod
-    def salvar_arquivo_texto(caixa_texto, pagina):
+    def salvar_como_arquivo_texto(caixa_texto, pagina):
         salvar_endereco_arquivo_texto = janela_salvar_arquivo()
         if salvar_endereco_arquivo_texto:
             try:
@@ -20,6 +20,9 @@ class FileTxt:
                         arquivo.write(conteudo)
             except Exception as e:
                 print(f"Erro ao salvar arquivo: {e}")
+    @staticmethod
+    def salvar_arquivo_texto(caixa_texto, pagina):
+    
 
 
 
