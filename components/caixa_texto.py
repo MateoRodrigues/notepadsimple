@@ -9,3 +9,5 @@ class CaixaTexto(tk.Text):
     def get_caixa_texto(self):
         conteudo = self.get(1.0,tk.END)
         return conteudo.strip()
+    def clear_caixa_texto(self):
+        self.delete(1.0, tk.END)

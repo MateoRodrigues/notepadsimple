@@ -4,13 +4,19 @@ from services.filetxt import FileTxt
 class MenuArquivo(tk.Menu):
     def __init__(self, master=None, caixa_texto=None, pagina=None):      
         super().__init__(master, tearoff=0,bg='white',activebackground="lightblue",activeforeground="black")
+        
+        # Pagina é a janela principal
+        # caixa_texto é a caixa de texto onde o usuário escreve
         self.pagina = pagina
         self.caixa_texto = caixa_texto
+
+        #Botões do menu Arquivo
         self.add_cascade(label='Novo', accelerator="Ctrl+N")
-        self.add_command(label='Nova Janela')
+        self.add_command(label='Nova Janela',accelerator='Ctrl+Shift+N')
         self.add_command(label='Abrir...', accelerator="Ctrl+O", command=self.abrir_arquivo)
         self.add_command(label='Salvar', accelerator="Ctrl+S", command=self.salvar_arquivo)
-        self.add_command(label='Salvar Como...', command=self.salvar_como_arquivo)
+        self.add_command(label='Salvar Como...', accelerator='Ctrl+Shift+S',command=self.salvar_como_arquivo)
+
     def abrir_arquivo(self):
         nome_arquivo,conteudo = FileTxt.abrir_arquivo_texto()
         self.pagina.atualizar_titulo_da_página(nome_arquivo)
