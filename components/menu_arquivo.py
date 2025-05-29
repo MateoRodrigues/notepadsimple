@@ -11,14 +11,14 @@ class MenuArquivo(tk.Menu):
         self.caixa_texto = caixa_texto
 
         #Botões do menu Arquivo
-        self.add_cascade(label='Novo', accelerator="Ctrl+N")
+        self.add_cascade(label='Novo', accelerator="Ctrl+N", command=self.novo_arquivo)
         self.add_command(label='Nova Janela',accelerator='Ctrl+Shift+N')
         self.add_command(label='Abrir...', accelerator="Ctrl+O", command=self.abrir_arquivo)
         self.add_command(label='Salvar', accelerator="Ctrl+S", command=self.salvar_arquivo)
         self.add_command(label='Salvar Como...', accelerator='Ctrl+Shift+S',command=self.salvar_como_arquivo)
 
     def abrir_arquivo(self):
-        nome_arquivo,conteudo = FileTxt.abrir_arquivo_texto()
+        nome_arquivo,conteudo,self.endereco_do_arquivo = FileTxt.abrir_arquivo_texto()
         self.pagina.atualizar_titulo_da_página(nome_arquivo)
         self.caixa_texto.set_caixa_texto(conteudo)
     def salvar_como_arquivo(self):
@@ -30,5 +30,8 @@ class MenuArquivo(tk.Menu):
             self.salvar_como_arquivo()
         else:
             conteudo = self.caixa_texto.get_caixa_texto()
-            FileTxt.salvar_arquivo_texto(conteudo, self.pagina)
+            FileTxt.salvar_arquivo_texto(conteudo, self.pagina,self.endereco_do_arquivo)
+    def novo_arquivo(self):
+        self.pagina.atualizar_titulo_da_página()
+        self.caixa_texto.clear_caixa_texto()
 

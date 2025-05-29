@@ -11,3 +11,8 @@ class CaixaTexto(tk.Text):
         return conteudo.strip()
     def clear_caixa_texto(self):
         self.delete(1.0, tk.END)
+    def select_all(self):
+        # Remove seleção anterior e seleciona tudo
+        self.tag_add("sel", "1.0", "end-1c")
+        self.mark_set("insert", "1.0")  # Move o cursor para o início
+        self.see("insert") 
