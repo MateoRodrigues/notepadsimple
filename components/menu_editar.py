@@ -10,8 +10,10 @@ class MenuEditar(tk.Menu):
         self.add_command(label='Copiar')
         self.add_command(label='Colar')
         self.add_command(label='Recortar')
-        self.add_command(label='Limpar')
+        self.add_command(label='Limpar',command=self.limpar)
         self.add_command(label='Selecionar Tudo', accelerator='Ctrl+A', command=self.selecionar_tudo)
 
     def selecionar_tudo(self):
         self.caixa_texto.select_all()
+    def limpar(self):
+        self.caixa_texto.clear_caixa_texto()
