@@ -16,3 +16,6 @@ class CaixaTexto(tk.Text):
         self.tag_add("sel", "1.0", "end-1c")
         self.mark_set("insert", "1.0")  # Move o cursor para o início
         self.see("insert") 
+    def paste(self):
+        conteudo = self.clipboard_get()
+        self.insert(tk.INSERT, conteudo)
