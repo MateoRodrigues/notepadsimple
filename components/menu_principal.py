@@ -5,7 +5,7 @@ from .menu_formatar import MenuFormatar
 
 class Menu(tk.Menu):
     def __init__(self,master=None, caixa_texto=None):
-        super().__init__(master, tearoff=0, font=("Arial", 18))
+        super().__init__(master, tearoff=0, font=("Arial", 12))
         self.master = master
         self.caixa_texto = caixa_texto  
         menu_arquivo1 = MenuArquivo(self, caixa_texto=caixa_texto,pagina=master)

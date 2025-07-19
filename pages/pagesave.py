@@ -12,6 +12,8 @@ def janela_salvar_arquivo():
         filetypes=[
             ('Arquivos de Texto', '*.txt'),
         ],
+        # Pasta onde vai salvar
+        initialdir="/home/matheus/Documentos/textos",
 
         # Nome inicial do arquivo
         initialfile='documento.txt',
