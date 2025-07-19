@@ -14,7 +14,7 @@ class JanelaPrincipal(tk.Tk):
         self.iconbitmap("C:/Users/mateo/Documents/python/notepadsimple/assets/Double-J-Design-Origami-Notepad.ico")
         self.title(titulo_pagina())
         # Configurações da caixa de texto
-        self.fonte_caixa_texto = tkFont.Font(family="Segoe UI", size=12)
+        self.fonte_caixa_texto = tkFont.Font(family="Arial", size=12)
         self.caixa_texto = CaixaTexto(self, font=self.fonte_caixa_texto)
         self.menu = Menu(self, self.caixa_texto)
         # Configurações da ordem da página
