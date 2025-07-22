@@ -6,12 +6,18 @@ from services.uteis import titulo_pagina
 class JanelaPrincipal(tk.Tk):
     def __init__(self):
         super().__init__()
+
         self.geometry("1000x500")
+
         # Muda a fonte padrão do menu vertical
+
         self.fonte_menu = tkFont.Font(family="CCourier New", size=12)
         self.option_add("*Menu*Font", self.fonte_menu)
+
         # Buscando o ícone nos arquivos
+        #icon = tk.PhotoImage(file="/assets/icone.png")
         self.title(titulo_pagina())
+
         # Configurações da caixa de texto
         self.fonte_caixa_texto = tkFont.Font(family="Arial", size=12)
         self.caixa_texto = CaixaTexto(self, font=self.fonte_caixa_texto)
