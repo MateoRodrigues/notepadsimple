@@ -25,3 +25,4 @@ class CaixaTexto(tk.Text):
     def paste(self):
         conteudo = self.clipboard_get()
         self.insert(tk.INSERT, conteudo)
+
