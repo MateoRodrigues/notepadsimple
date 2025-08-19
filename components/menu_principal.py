@@ -10,7 +10,7 @@ class Menu(tk.Menu):
         self.caixa_texto = caixa_texto  
         menu_arquivo1 = MenuArquivo(self, caixa_texto=caixa_texto,pagina=master)
         menu_editar1 = MenuEditar(self, caixa_texto=caixa_texto, pagina=master)
-        menu_formatar1 = MenuFormatar(self)
+        menu_formatar1 = MenuFormatar(self, pagina=master)
         self.add_cascade(label="Arquivo",menu=menu_arquivo1)
         self.add_cascade(label="Editar",menu=menu_editar1)
         self.add_cascade(label="Formatar",menu=menu_formatar1)

@@ -37,6 +37,7 @@ class JanelaPrincipal(tk.Tk):
             self.title(titulo_pagina())
         else:
             self.title(titulo_pagina(nome_arquivo))
+     
    
 
             
