@@ -4,8 +4,8 @@ class JanelaSubstituir(ctk.CTkToplevel):
     def __init__(self, master=None, **kwargs):
         super().__init__(master, **kwargs)
 
-        self.title("Janela Substituir (CTkToplevel)")
-        self.geometry("300x150")
+        self.title("Substituir")
+        self.geometry("600x300")
 
         self.label = ctk.CTkLabel(self, text="Sou uma janela do CustomTkinter")
         self.label.pack(pady=20)

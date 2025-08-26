@@ -1,5 +1,5 @@
 import tkinter as tk
-from ..pages. import JanelaSubstituir
+from pages.pagereplace import JanelaSubstituir
 
 class MenuFormatar(tk.Menu):
     def __init__(self, master=None, pagina=None):      
