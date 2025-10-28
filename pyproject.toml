@@ -61,7 +61,7 @@ dependencies = [
     "python-dateutil==2.8.1",
     "pytz==2022.1",
     "pyxdg==0.27",
-    "pyyaml==5.4.1",
+    "pyyaml==6.0",
     "reportlab==3.6.8",
     "requests==2.25.1",
     "secretstorage==3.3.1",

@@ -4,6 +4,7 @@ import tkinter.font as tkFont
 from components.menu_principal import Menu
 from components.caixa_texto import CaixaTexto
 from services.uteis import titulo_pagina
+from pathlib import Path
 
 class JanelaPrincipal(tk.Tk):
     def __init__(self):
@@ -13,13 +14,15 @@ class JanelaPrincipal(tk.Tk):
 
         # Muda a fonte padrão do menu vertical
 
-        self.fonte_menu = tkFont.Font(family="CCourier New", size=12)
+        self.fonte_menu = tkFont.Font(family="Verdana", size=12)
         self.option_add("*Menu*Font", self.fonte_menu)
 
         # Buscando o ícone nos arquivos
-        caminho_base = os.path.dirname(__file__)
-        caminho_icone = os.path.join(caminho_base, "../assets/iconelinux.png")
-        icon = tk.PhotoImage(file=caminho_icone)
+        #caminho_base = os.path.dirname(__file__)
+        #caminho_icone = os.path.join(caminho_base, "../assets/iconelinux.png")
+        caminho_icone = Path(__file__).parent.parent.parent / "assets" / "iconelinux.png"
+
+        icon = tk.PhotoImage(file=str(caminho_icone))
         self.iconphoto(True, icon)
         #Titulo da página
         self.title(titulo_pagina())
