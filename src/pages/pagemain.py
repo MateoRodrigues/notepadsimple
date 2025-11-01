@@ -5,22 +5,18 @@ from components.menu_principal import Menu
 from components.caixa_texto import CaixaTexto
 from services.uteis import titulo_pagina
 from pathlib import Path
+import ttkbootstrap as ttk
 
 class JanelaPrincipal(tk.Tk):
     def __init__(self):
         super().__init__()
+        ttk.Style("litera")
 
         self.geometry("1000x500")
 
         # Muda a fonte padrão do menu vertical
         self.fonte_sistema = tkFont.nametofont("TkMenuFont")
         self.fonte_sistema.configure(size=20, family='bitstream charter', weight="bold",)
-        print("Fontes disponíveis:")
-        for f in sorted(tkFont.families()):
-            print(f)
-        print(f"Fonte atual do menu: {self.fonte_sistema.actual()}")
-
-
         # Buscando o ícone nos arquivos
         #caminho_base = os.path.dirname(__file__)
         #caminho_icone = os.path.join(caminho_base, "../assets/iconelinux.png")
