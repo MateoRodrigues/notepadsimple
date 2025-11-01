@@ -1,5 +1,5 @@
 import tkinter as tk
-from services.filetxt import FileTxt
+from repository.filetxt import FileTxt
 
 class MenuArquivo(tk.Menu):
     def __init__(self, master=None, caixa_texto=None, pagina=None):      

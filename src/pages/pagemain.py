@@ -13,9 +13,13 @@ class JanelaPrincipal(tk.Tk):
         self.geometry("1000x500")
 
         # Muda a fonte padrão do menu vertical
+        self.fonte_sistema = tkFont.nametofont("TkMenuFont")
+        self.fonte_sistema.configure(size=20, family='bitstream charter', weight="bold",)
+        print("Fontes disponíveis:")
+        for f in sorted(tkFont.families()):
+            print(f)
+        print(f"Fonte atual do menu: {self.fonte_sistema.actual()}")
 
-        self.fonte_menu = tkFont.Font(family="Verdana", size=12)
-        self.option_add("*Menu*Font", self.fonte_menu)
 
         # Buscando o ícone nos arquivos
         #caminho_base = os.path.dirname(__file__)
@@ -30,7 +34,7 @@ class JanelaPrincipal(tk.Tk):
         # Configurações da caixa de texto
         self.fonte_caixa_texto = tkFont.Font(family="Arial", size=12)
         self.caixa_texto = CaixaTexto(self, font=self.fonte_caixa_texto)
-        self.menu = Menu(self, self.caixa_texto)
+        self.menu = Menu(self, self.caixa_texto,)
         # Configurações da ordem da página
         self.config(menu=self.menu)
         self.caixa_texto.pack(side=tk.BOTTOM,expand=True,fill='both')

@@ -4,8 +4,9 @@ from .menu_editar import MenuEditar
 from .menu_formatar import MenuFormatar
 
 class Menu(tk.Menu):
-    def __init__(self,master=None, caixa_texto=None):
-        super().__init__(master, tearoff=0, font=("Arial", 12))
+    def __init__(self,master=None, caixa_texto=None, fonte=None):
+        #self.fonte_tupla = (fonte.actual()['family'], fonte.actual()['size'], 'bold')
+        super().__init__(master, tearoff=0,)
         self.master = master
         self.caixa_texto = caixa_texto  
         menu_arquivo1 = MenuArquivo(self, caixa_texto=caixa_texto,pagina=master)
