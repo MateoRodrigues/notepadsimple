@@ -21,10 +21,11 @@ class JanelaSubstituir(ttk.Toplevel):
 
         # Configurações do frame de substituir
         self.label_substituir = ttk.Label(self.frame_substituir, text="Substituir:")
-        self.label_substituir.pack(padx=5, pady=20, side=ttk.LEFT)
+        self.label_substituir.pack(padx=5, pady=0, side=ttk.LEFT)
         self.entry_substituir = ttk.Entry(self.frame_substituir)
         self.entry_substituir.pack(padx=5, side=ttk.LEFT)
         self.button_subs = ttk.Button(self.frame_substituir, text="Substituir", bootstyle="info")
+        self.button_subs.pack(pady=0, side=ttk.LEFT)
         self.button_subs_all = ttk.Button(self.frame_substituir, text="Substituir Tudo", bootstyle="success")
         self.button_subs_all.pack(padx=100, side=ttk.RIGHT)
         self.button_subs.pack(pady=0, side=ttk.LEFT)

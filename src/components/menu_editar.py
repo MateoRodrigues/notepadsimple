@@ -5,9 +5,6 @@ class MenuEditar(tk.Menu):
         super().__init__(master, tearoff=0,bg='white',activebackground="lightblue",activeforeground="black")
         self.caixa_texto = caixa_texto
         self.pagina = pagina
-
-
-        self.add_cascade(label='Editar')
         self.add_command(label='Copiar', accelerator='Ctrl+C', command=self.copiar)
         self.add_command(label='Colar', accelerator='Ctrl+V', command=self.colar)
         self.add_command(label='Recortar')
