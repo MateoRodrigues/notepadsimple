@@ -16,7 +16,7 @@ class JanelaPrincipal(tk.Tk):
 
         # Muda a fonte padrão do menu vertical
         self.fonte_sistema = tkFont.nametofont("TkMenuFont")
-        self.fonte_sistema.configure(size=20, family='bitstream charter', weight="bold",)
+        self.fonte_sistema.configure(size=20, family='newspaper', weight="bold",)
         # Buscando o ícone nos arquivos
         #caminho_base = os.path.dirname(__file__)
         #caminho_icone = os.path.join(caminho_base, "../assets/iconelinux.png")
