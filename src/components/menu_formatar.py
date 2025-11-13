@@ -8,7 +8,9 @@ class MenuFormatar(tk.Menu):
         self.janelasubstituir = JanelaSubstituir
         self.pagina = pagina
         self.menu_fonte = tk.Menu(self, tearoff=0)
+        # Adiciona as fontes disponíveis ao submenu de fontes
         for fonte in sorted(tkFont.families()):
+            # Adiciona cada fonte como um comando no submenu e define a ação ao ser selecionada
             self.menu_fonte.add_command(label=fonte, command=lambda f=fonte: self.alterar_fonte(f))
         self.add_cascade(label='Fonte...', menu=self.menu_fonte)
         self.add_command(label='Substituir', command=self.substituir)
