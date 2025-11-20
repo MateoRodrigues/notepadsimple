@@ -29,7 +29,7 @@ class JanelaPrincipal(tk.Tk):
 
         # Configurações da caixa de texto
         self.fonte_caixa_texto = tkFont.Font(family="Arial", size=12)
-        self.caixa_texto = CaixaTexto(self, font=self.fonte_caixa_texto)
+        self.caixa_texto = CaixaTexto(self, pagina = self)
         self.menu = Menu(self, self.caixa_texto,)
         # Configurações da ordem da página
         self.config(menu=self.menu)

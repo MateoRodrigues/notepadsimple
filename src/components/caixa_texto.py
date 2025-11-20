@@ -1,7 +1,8 @@
 import tkinter as tk
+from services.uteis import titulo_pagina
 
 class CaixaTexto(tk.Text):
-    def __init__(self,master=None, **kwargs):
+    def __init__(self, master=None,*, pagina=None, **kwargs):
         super().__init__(master,wrap="word",
                                font=("Arial", 12),
                                bg="#2B2B2B",  # Cor de fundo escura
@@ -9,6 +10,8 @@ class CaixaTexto(tk.Text):
                                insertbackground="white",  # Cursor branco
                                selectbackground="#1F538D",  # Seleção azul
                                relief="flat")
+        self.bind("<<Modified>>", self.on_modified)
+        self.pagina = pagina
     def set_caixa_texto(self,conteudo):
         self.delete(1.0,tk.END)
         self.insert(1.0,conteudo)
@@ -25,4 +28,10 @@ class CaixaTexto(tk.Text):
     def paste(self):
         conteudo = self.clipboard_get()
         self.insert(tk.INSERT, conteudo)
+    def on_modified(self, event=None):
+        # Reseta a flag de modificação
+        t = self.pagina.title()
+        self.pagina.title(f'*{t}')
+
+        self.edit_modified(False)
 

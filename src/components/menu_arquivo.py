@@ -1,5 +1,6 @@
 import tkinter as tk
 from repository.filetxt import FileTxt
+from services.uteis import titulo_pagina
 
 class MenuArquivo(tk.Menu):
     def __init__(self, master=None, caixa_texto=None, pagina=None):      
@@ -29,6 +30,7 @@ class MenuArquivo(tk.Menu):
         if titulo_da_pagina_atual == 'Sem título - Bloco de Notas':
             self.salvar_como_arquivo()
         else:
+            self.pagina.title(titulo_da_pagina_atual.replace('*',''))
             conteudo = self.caixa_texto.get_caixa_texto()
             FileTxt.salvar_arquivo_texto(conteudo, self.pagina,self.endereco_do_arquivo)
     def novo_arquivo(self):
