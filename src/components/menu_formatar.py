@@ -17,6 +17,8 @@ class MenuFormatar(tk.Menu):
 
     def alterar_fonte(self, fonte):
         print(fonte)
+    def substituir(self):
+        pass
 
 
    
