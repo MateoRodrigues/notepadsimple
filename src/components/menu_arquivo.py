@@ -11,7 +11,7 @@ class MenuArquivo(tk.Menu):
         self.caixa_texto = caixa_texto
 
         #Botões do menu Arquivo
-        self.add_cascade(label='Novo', accelerator="Ctrl+N", command=self.novo_arquivo)
+        self.add_command(label='Novo', accelerator="Ctrl+N", command=self.novo_arquivo)
         self.add_command(label='Nova Janela',accelerator='Ctrl+Shift+N')
         self.add_command(label='Abrir...', accelerator="Ctrl+O", command=self.abrir_arquivo)
         self.add_command(label='Salvar', accelerator="Ctrl+S", command=self.salvar_arquivo)
