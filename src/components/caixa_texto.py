@@ -30,8 +30,8 @@ class CaixaTexto(tk.Text):
         self.insert(tk.INSERT, conteudo)
     def on_modified(self, event=None):
         # Reseta a flag de modificação
-        t = self.pagina.title()
-        self.pagina.title(f'*{t}')
-
-        self.edit_modified(False)
+        if self.edit_modified:
+            t = self.pagina.title()
+            self.pagina.title(f'*{t}')
+            self.edit_modified(True)
 
