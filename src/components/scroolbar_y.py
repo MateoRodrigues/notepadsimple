@@ -1,5 +1,6 @@
 import ttkbootstrap as tb
 
+
 class AutoHideScrollbar(tb.ttk.Scrollbar):
     def set(self, low, high):
         if float(low) <= 0 and float(high) >= 1:
@@ -11,4 +12,3 @@ class AutoHideScrollbar(tb.ttk.Scrollbar):
                 self.pack(side="right", fill="y")
 
         super().set(low, high)
-
