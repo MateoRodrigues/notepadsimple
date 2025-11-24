@@ -1,6 +1,7 @@
 import ttkbootstrap as ttk
 import tkinter as tk
 
+
 class JanelaSubstituir(tk.Toplevel):
     def __init__(self, master=None, **kwargs):
         super().__init__(master, **kwargs)
@@ -25,9 +26,9 @@ class JanelaSubstituir(tk.Toplevel):
         self.label_substituir.pack(padx=5, pady=0, side=ttk.LEFT)
         self.entry_substituir = ttk.Entry(self.frame_substituir, bootstyle="dark")
         self.entry_substituir.pack(padx=5, side=ttk.LEFT)
-        self.button_subs = ttk.Button(self.frame_substituir, text="Substituir", bootstyle="dark")
+        self.button_subs = ttk.Button(
+            self.frame_substituir, text="Substituir", bootstyle="dark"
+        )
         self.button_subs.pack(pady=0, side=ttk.LEFT, padx=0)
-        #self.button_subs_all = ttk.Button(self.frame_substituir, text="Substituir Tudo", bootstyle="dark")
-        #self.button_subs_all.pack(padx=0, side=ttk.RIGHT)
-
-
+        # self.button_subs_all = ttk.Button(self.frame_substituir, text="Substituir Tudo", bootstyle="dark")
+        # self.button_subs_all.pack(padx=0, side=ttk.RIGHT)
