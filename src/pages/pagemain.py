@@ -17,8 +17,8 @@ class JanelaPrincipal(tk.Tk):
         # Muda a fonte padrão do menu vertical
         self.fonte_sistema = tkFont.nametofont("TkMenuFont")
         self.fonte_sistema.configure(size=20, family='newspaper', weight="bold",)
+        # Ícone da aplicação
         caminho_icone = Path(__file__).parent.parent.parent / "assets" / "iconelinux.png"
-
         icon = tk.PhotoImage(file=str(caminho_icone))
         self.iconphoto(True, icon)
         #Titulo da página
