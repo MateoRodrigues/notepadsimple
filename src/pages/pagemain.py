@@ -5,6 +5,7 @@ from components.caixa_texto import CaixaTexto
 from services.uteis import titulo_pagina
 from pathlib import Path
 import ttkbootstrap as ttk
+from components.scroolbar_y import AutoHideScrollbar
 
 
 class JanelaPrincipal(tk.Tk):
@@ -38,10 +39,18 @@ class JanelaPrincipal(tk.Tk):
             self,
             self.caixa_texto,
         )
+        self.scrollbar = ttk.Scrollbar(
+            self.caixa_texto,
+            orient="vertical",
+            command=self.caixa_texto.yview,
+            bootstyle="dark-round",
+        )
         # Configurações da ordem da página
         self.config(menu=self.menu)
         self.sep.pack(side=tk.TOP, fill="x")
         self.caixa_texto.pack(side=tk.BOTTOM, expand=True, fill="both")
+        self.scrollbar.pack(side=tk.RIGHT, fill="y")
+        self.caixa_texto.configure(yscrollcommand=self.scrollbar.set)
 
     def atualizar_titulo_da_página(self, nome_arquivo=None):
         if nome_arquivo is None:
