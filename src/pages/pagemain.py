@@ -5,7 +5,6 @@ from components.caixa_texto import CaixaTexto
 from services.uteis import titulo_pagina
 from pathlib import Path
 import ttkbootstrap as ttk
-from components.scroolbar_y import AutoHideScrollbar
 
 
 class JanelaPrincipal(tk.Tk):
