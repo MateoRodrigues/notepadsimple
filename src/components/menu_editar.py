@@ -7,8 +7,8 @@ class MenuEditar(tk.Menu):
         self.pagina = pagina
         self.add_command(label='Copiar', accelerator='Ctrl+C', command=self.copiar)
         self.add_command(label='Colar', accelerator='Ctrl+V', command=self.colar)
-        self.add_command(label='Recortar')
-        self.add_command(label='Limpar',command=self.limpar)
+        self.add_command(label='Recortar', accelerator='Ctrl+X')
+        self.add_command(label='Limpar',accelerator='Ctrl+L',command=self.limpar)
         self.add_command(label='Selecionar Tudo', accelerator='Ctrl+A', command=self.selecionar_tudo)
 
     def selecionar_tudo(self):

@@ -1,6 +1,7 @@
 import ttkbootstrap as ttk
+import tkinter as tk
 
-class JanelaSubstituir(ttk.Toplevel):
+class JanelaSubstituir(tk.Toplevel):
     def __init__(self, master=None, **kwargs):
         super().__init__(master, **kwargs)
         self.frame = ttk.Frame(self)
@@ -12,22 +13,21 @@ class JanelaSubstituir(ttk.Toplevel):
         self.geometry("600x300")
 
         # Configurações do frame
-        self.label = ttk.Label(self.frame, text="Localizar:")
+        self.label = ttk.Label(self.frame, text="Localizar:", relief="flat")
         self.label.pack(padx=5, pady=20, side=ttk.LEFT)
-        self.entry = ttk.Entry(self.frame)
+        self.entry = ttk.Entry(self.frame, bootstyle="dark")
         self.entry.pack(padx=5, side=ttk.LEFT)
-        self.button = ttk.Button(self.frame, text="Localizar Próxima", bootstyle="primary")
+        self.button = ttk.Button(self.frame, text="Localizar Próxima", bootstyle="dark")
         self.button.pack(pady=20, side=ttk.LEFT)
 
         # Configurações do frame de substituir
         self.label_substituir = ttk.Label(self.frame_substituir, text="Substituir:")
         self.label_substituir.pack(padx=5, pady=0, side=ttk.LEFT)
-        self.entry_substituir = ttk.Entry(self.frame_substituir)
+        self.entry_substituir = ttk.Entry(self.frame_substituir, bootstyle="dark")
         self.entry_substituir.pack(padx=5, side=ttk.LEFT)
-        self.button_subs = ttk.Button(self.frame_substituir, text="Substituir", bootstyle="info")
-        self.button_subs.pack(pady=0, side=ttk.LEFT)
-        self.button_subs_all = ttk.Button(self.frame_substituir, text="Substituir Tudo", bootstyle="success")
-        self.button_subs_all.pack(padx=100, side=ttk.RIGHT)
-        self.button_subs.pack(pady=0, side=ttk.LEFT)
+        self.button_subs = ttk.Button(self.frame_substituir, text="Substituir", bootstyle="dark")
+        self.button_subs.pack(pady=0, side=ttk.LEFT, padx=0)
+        #self.button_subs_all = ttk.Button(self.frame_substituir, text="Substituir Tudo", bootstyle="dark")
+        #self.button_subs_all.pack(padx=0, side=ttk.RIGHT)
 
 
