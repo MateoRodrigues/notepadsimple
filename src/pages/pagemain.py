@@ -5,6 +5,7 @@ from components.caixa_texto import CaixaTexto
 from services.uteis import titulo_pagina
 from pathlib import Path
 import ttkbootstrap as ttk
+from components.scroolbar_y import AutoHideScrollbar
 
 
 class JanelaPrincipal(tk.Tk):
@@ -38,7 +39,7 @@ class JanelaPrincipal(tk.Tk):
             self,
             self.caixa_texto,
         )
-        self.scrollbar = ttk.Scrollbar(
+        self.scrollbar = AutoHideScrollbar(
             self.caixa_texto,
             orient="vertical",
             command=self.caixa_texto.yview,
