@@ -39,7 +39,7 @@ class JanelaPrincipal(tk.Tk):
             self,
             self.caixa_texto,
         )
-        self.scrollbar = ttk.Scrollbar(
+        self.scrollbar = AutoHideScrollbar(
             self.caixa_texto,
             orient="vertical",
             command=self.caixa_texto.yview,

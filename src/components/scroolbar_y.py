@@ -1,4 +1,6 @@
 import ttkbootstrap as tb
+import tkinter as tk
+
 
 class AutoHideScrollbar(tb.ttk.Scrollbar):
     def set(self, low, high):
@@ -8,7 +10,6 @@ class AutoHideScrollbar(tb.ttk.Scrollbar):
             # Conteúdo não cabe → mostrar scrollbar
             # Só mostra se ainda não estiver visível
             if not self.winfo_ismapped():
-                self.pack(side="right", fill="y")
+                self.pack(side=tk.RIGHT, fill="y")
 
-        super().set(low, high)
-
+        super().set()
