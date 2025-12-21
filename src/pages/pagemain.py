@@ -24,7 +24,7 @@ class JanelaPrincipal(tk.Tk):
         )
         # Ícone da aplicação
         caminho_icone = (
-            Path(__file__).parent.parent.parent / "assets" / "icon_black_white.png"
+            Path(__file__).parent.parent.parent / "assets" / "iconeinverso.png"
         )
         icon = tk.PhotoImage(file=str(caminho_icone))
         self.iconphoto(True, icon)
