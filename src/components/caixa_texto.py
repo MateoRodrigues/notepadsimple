@@ -6,7 +6,7 @@ class CaixaTexto(tk.Text):
         super().__init__(
             master,
             wrap="word",
-            font=("Arial", 12),
+            font=("mincho", 12),
             bg="#2B2B2B",  # Cor de fundo escura
             fg="white",  # Texto branco
             insertbackground="white",  # Cursor branco
