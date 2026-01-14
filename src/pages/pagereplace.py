@@ -1,34 +1,30 @@
 import ttkbootstrap as ttk
-import tkinter as tk
+import tkinter as tk # type: ignore
 
 
 class JanelaSubstituir(tk.Toplevel):
     def __init__(self, master=None, **kwargs):
         super().__init__(master, **kwargs)
-        self.frame = ttk.Frame(self)
-        self.frame_substituir = ttk.Frame(self)
-        self.frame.pack(pady=0, padx=0, side=ttk.TOP, fill="x")
-        self.frame_substituir.pack(pady=0, padx=0, side=ttk.TOP, fill="x")
 
         self.title("Substituir")
-        self.geometry("600x300")
+        self.geometry("600x300") 
+        self.label = ttk.Label(self, text="Localizar:", relief="flat", font=("mincho", 10), style="dark")
+        self.label.grid(row=20,column=4,padx=2, pady=0,columnspan=2,sticky="ew",)
 
-        # Configurações do frame
-        self.label = ttk.Label(self.frame, text="Localizar:", relief="flat")
-        self.label.pack(padx=5, pady=20, side=ttk.LEFT)
-        self.entry = ttk.Entry(self.frame, bootstyle="dark")
-        self.entry.pack(padx=5, side=ttk.LEFT)
-        self.button = ttk.Button(self.frame, text="Localizar Próxima", bootstyle="dark")
-        self.button.pack(pady=20, side=ttk.LEFT)
-
-        # Configurações do frame de substituir
-        self.label_substituir = ttk.Label(self.frame_substituir, text="Substituir:")
-        self.label_substituir.pack(padx=5, pady=0, side=ttk.LEFT)
-        self.entry_substituir = ttk.Entry(self.frame_substituir, bootstyle="dark")
-        self.entry_substituir.pack(padx=5, side=ttk.LEFT)
-        self.button_subs = ttk.Button(
-            self.frame_substituir, text="Substituir", bootstyle="dark"
-        )
-        self.button_subs.pack(pady=0, side=ttk.LEFT, padx=0)
-        # self.button_subs_all = ttk.Button(self.frame_substituir, text="Substituir Tudo", bootstyle="dark")
-        # self.button_subs_all.pack(padx=0, side=ttk.RIGHT)
+        self.entry = ttk.Entry(self, bootstyle="dark")
+        self.entry.grid(row=20, column=6,padx=0, pady=30,columnspan=2, sticky="ew"
+                        )
+        self.button = ttk.Button(self, text="Localizar Próxima", bootstyle="dark")
+        self.button.grid(row=20, column=8,padx=2, pady=20,columnspan=2, sticky="ew")
+        self.label_substituir = ttk.Label(self, text="Substituir:")
+        self.label_substituir.grid(row=21, column=4,padx=2, pady=0,columnspan=1,sticky="ew")
+        self.entry_substituir = ttk.Entry(self, bootstyle="dark",font=("mincho", 10))
+        self.entry_substituir.grid(row=21, column=6,padx=0, pady=0,columnspan=1, sticky="ew")
+        self.button_subs = ttk.Button(self, text="Substituir", bootstyle="dark")
+        self.button_subs.grid(row=21, column=8,padx=0, pady=0,columnspan=1, sticky="ew")
+        self.button_subs_all = ttk.Button(self, text="Substituir Tudo", bootstyle="dark")
+        self.button_subs_all.grid(row=21, column=10,padx=0, pady=0,columnspan=1)
+        self.checkbutton = ttk.Checkbutton(self,bootstyle='dark', text='Diferenciar minúsculas e maiúsculas')
+        self.checkbutton_2 = ttk.Checkbutton(self,bootstyle='dark', text='Coincidir com palavra inteira.')
+        self.checkbutton_2.grid(row=24, column=4, padx=2, pady=0, sticky='ew')
+        self.checkbutton.grid(row=22, column=4, pady=1, padx=2)
