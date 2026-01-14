@@ -1,19 +1,21 @@
 import tkinter as tk
 import tkinter.font as tkFont
+import os 
 from components.menu_principal import Menu
 from components.caixa_texto import CaixaTexto
 from services.uteis import titulo_pagina
 from pathlib import Path
 import ttkbootstrap as ttk
 from components.scroolbar_y import AutoHideScrollbar
+from services.pagemain_bloc import PageMainControl
 
 
 class JanelaPrincipal(tk.Tk):
     def __init__(self):
         super().__init__()
         ttk.Style("litera")
-
-        self.geometry("1000x500")
+        self.pgmain_control = PageMainControl()
+        self.geometry(self.pgmain_control.geometry)
 
         # Muda a fonte padrão do menu vertical
         self.fonte_sistema = tkFont.nametofont("TkMenuFont")
