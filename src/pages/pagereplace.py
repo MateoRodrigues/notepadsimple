@@ -27,7 +27,7 @@ class JanelaSubstituir(tk.Toplevel):
         self.entry_substituir = ttk.Entry(self.quadro_cabeçalho, bootstyle="dark",font=("mincho", 10))
         self.entry_substituir.grid(row=21, column=5,padx=0, pady=0,columnspan=1, sticky="w")
         self.button_subs = ttk.Button(self.quadro_cabeçalho, text="Substituir", bootstyle="dark")
-        self.button_subs.grid(row=21, column=8,padx=5, pady=0,columnspan=1, sticky="ew")
+        self.button_subs.grid(row=21, column=8,padx=5, pady=0,columnspan=1)
 
         self.checkbutton = ttk.Checkbutton(self.quadro_bottom,bootstyle='dark', text='Diferenciar minúsculas e maiúsculas')
         self.checkbutton.grid(row=22, column=6, pady=10, padx=5)
