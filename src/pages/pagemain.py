@@ -35,7 +35,6 @@ class JanelaPrincipal(tk.Tk):
         self.sep = ttk.ttk.Separator(self, orient="horizontal", bootstyle="dark")
 
         # Configurações da caixa de texto
-        self.fonte_caixa_texto = tkFont.Font(family="Arial", size=12)
         self.caixa_texto = CaixaTexto(self, pagina=self)
         self.menu = Menu(
             self,
