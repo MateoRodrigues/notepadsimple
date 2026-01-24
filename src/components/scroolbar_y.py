@@ -1,8 +1,8 @@
-import ttkbootstrap as tb
+import ttkbootstrap as ttk
 import tkinter as tk
 
 
-class AutoHideScrollbar(tb.ttk.Scrollbar):
+class AutoHideScrollbar(ttk.Scrollbar):
     def set(self, first, last):
         self._first = float(first)
         self._last = float(last)
