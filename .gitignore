@@ -1,12 +1,14 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 **/__pycache__/
+bin/
 *.py[cod]
 *$py.class
 
 # C extensions
 *.so
-
+pyvenv.cfg
+lib64/
 # Distribution / packaging
 .Python
 build/
@@ -165,3 +167,6 @@ storage/
 
 # ruff
 .ruff_cache/
+
+
+

@@ -1,6 +1,7 @@
 import tkinter as tk
 import tkinter.font as tkFont
 import os 
+import sys
 from components.menu_principal import Menu
 from components.caixa_texto import CaixaTexto
 from services.uteis import titulo_pagina
@@ -21,7 +22,7 @@ class JanelaPrincipal(tk.Tk):
         self.fonte_sistema = tkFont.nametofont("TkMenuFont")
         self.fonte_sistema.configure(
             size=20,
-            family="mincho",
+            family="JetBrains Mono",
             weight="bold",
         )
         # Ícone da aplicação
@@ -32,7 +33,7 @@ class JanelaPrincipal(tk.Tk):
         self.iconphoto(True, icon)
         # Titulo da página
         self.title(titulo_pagina())
-        self.sep = ttk.ttk.Separator(self, orient="horizontal", bootstyle="dark")
+        self.sep = ttk.Separator(self, orient="horizontal", bootstyle="dark")
 
         # Configurações da caixa de texto
         self.caixa_texto = CaixaTexto(self, pagina=self)
@@ -58,3 +59,8 @@ class JanelaPrincipal(tk.Tk):
             self.title(titulo_pagina())
         else:
             self.title(titulo_pagina(nome_arquivo))
+
+
+
+
+

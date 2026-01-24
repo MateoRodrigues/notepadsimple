@@ -1,4 +1,5 @@
 import tkinter as tk
+from pages.pagereplace import JanelaSubstituir
 
 
 class MenuEditar(tk.Menu):
@@ -19,6 +20,7 @@ class MenuEditar(tk.Menu):
         self.add_command(
             label="Selecionar Tudo", accelerator="Ctrl+A", command=self.selecionar_tudo
         )
+        self.add_command(label="Substituir", command=self.substituir)
 
     def selecionar_tudo(self):
         self.caixa_texto.select_all()
@@ -32,3 +34,6 @@ class MenuEditar(tk.Menu):
     def copiar(self):
         self.pagina.clipboard_clear()
         self.pagina.clipboard_append(self.caixa_texto.get_caixa_texto())
+
+    def substituir(self):
+        JanelaSubstituir(self.pagina, caixa_texto=self.caixa_texto)
