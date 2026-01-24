@@ -38,5 +38,4 @@ class JanelaSubstituir(tk.Toplevel):
     def on_enter_pressed(self, event):
         # Ação a ser executada quando a tecla Enter for pressionada
         self.palavra_localizar = self.entry.get()
-        self.conteudo = self.caixa_texto.set_caixa_texto(self.palavra_localizar)
-
+        self.caixa_texto.destacar_palavras([self.palavra_localizar])
